@@ -27,12 +27,26 @@ set(ADD_TWO_NUMS
         src/中级算法/AddTwoNums.cpp src/中级算法/AddTwoNums.h)
 add_executable(AddTwoNums ${ADD_TWO_NUMS})
 
+set(FIND_MEDIAN_SORTED_ARRAYS
+        test/中级算法/FindMedianSortedArrays.cpp
+        src/中级算法/FindMedianSortedArrays.h src/中级算法/FindMedianSortedArrays.cpp)
+add_executable(FindMedianSortedArrays ${FIND_MEDIAN_SORTED_ARRAYS})
+
+set(LONGEST_PALINDROME
+        test/中级算法/LongestPalindrome.cpp
+        src/中级算法/LongestPalindrome.cpp src/中级算法/LongestPalindrome.h)
+add_executable(LongestPalindrome ${LONGEST_PALINDROME})
+
 
 # Link with GoogleTest
 target_link_libraries(SumOfThreeNumbers gtest gtest_main)
 target_link_libraries(LengthOfLongestSubstring gtest gtest_main)
 target_link_libraries(AddTwoNums gtest gtest_main)
+target_link_libraries(FindMedianSortedArrays gtest gtest_main)
+target_link_libraries(LongestPalindrome gtest gtest_main)
 #Link with GoogleMock
 target_link_libraries(SumOfThreeNumbers gmock gmock_main)
 target_link_libraries(AddTwoNums gmock gmock_main)
 target_link_libraries(LengthOfLongestSubstring gmock gmock_main)
+target_link_libraries(FindMedianSortedArrays gmock gmock_main)
+target_link_libraries(LongestPalindrome gmock gmock_main)
