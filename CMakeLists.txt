@@ -37,6 +37,11 @@ set(LONGEST_PALINDROME
         src/中级算法/LongestPalindrome.cpp src/中级算法/LongestPalindrome.h)
 add_executable(LongestPalindrome ${LONGEST_PALINDROME})
 
+set(Z_CONVERT
+        test/中级算法/Z_Convert.cpp
+        src/中级算法/Z_Convert.h src/中级算法/Z_Convert.cpp)
+add_executable(Z_Convert ${Z_CONVERT})
+
 
 # Link with GoogleTest
 target_link_libraries(SumOfThreeNumbers gtest gtest_main)
@@ -44,9 +49,11 @@ target_link_libraries(LengthOfLongestSubstring gtest gtest_main)
 target_link_libraries(AddTwoNums gtest gtest_main)
 target_link_libraries(FindMedianSortedArrays gtest gtest_main)
 target_link_libraries(LongestPalindrome gtest gtest_main)
+target_link_libraries(Z_Convert gtest gtest_main)
 #Link with GoogleMock
 target_link_libraries(SumOfThreeNumbers gmock gmock_main)
 target_link_libraries(AddTwoNums gmock gmock_main)
 target_link_libraries(LengthOfLongestSubstring gmock gmock_main)
 target_link_libraries(FindMedianSortedArrays gmock gmock_main)
 target_link_libraries(LongestPalindrome gmock gmock_main)
+target_link_libraries(Z_Convert gmock gmock_main)
