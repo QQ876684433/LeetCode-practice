@@ -47,6 +47,23 @@ set(IS_PALINDROME
         test/中级算法/IsPalindrome.cpp)
 add_executable(IsPalindrome ${IS_PALINDROME})
 
+set(THREE_SUM_CLOSEST
+        src/中级算法/ThreeSumClosest.cpp src/中级算法/ThreeSumClosest.h
+        test/中级算法/ThreeSumClosest.cpp)
+add_executable(ThreeSumClosest ${THREE_SUM_CLOSEST})
+
+set(ASTAR_A
+        src/中级算法/astar_A.h src/中级算法/astar_A.cpp
+        test/中级算法/astar_A.cpp)
+add_executable(astar_A ${ASTAR_A})
+
+add_executable(A src/A.cpp)
+add_executable(C src/C.cpp)
+add_executable(B src/B.cpp)
+add_executable(860 src/860.cpp)
+add_executable(20 src/20.cpp)
+add_executable(11 src/11.cpp)
+add_executable(Test src/Test.cpp)
 
 # Link with GoogleTest
 target_link_libraries(SumOfThreeNumbers gtest gtest_main)
@@ -56,6 +73,8 @@ target_link_libraries(FindMedianSortedArrays gtest gtest_main)
 target_link_libraries(LongestPalindrome gtest gtest_main)
 target_link_libraries(Z_Convert gtest gtest_main)
 target_link_libraries(IsPalindrome gtest gtest_main)
+target_link_libraries(ThreeSumClosest gtest gtest_main)
+target_link_libraries(astar_A gtest gtest_main)
 #Link with GoogleMock
 target_link_libraries(SumOfThreeNumbers gmock gmock_main)
 target_link_libraries(AddTwoNums gmock gmock_main)
@@ -64,3 +83,5 @@ target_link_libraries(FindMedianSortedArrays gmock gmock_main)
 target_link_libraries(LongestPalindrome gmock gmock_main)
 target_link_libraries(Z_Convert gmock gmock_main)
 target_link_libraries(IsPalindrome gmock gmock_main)
+target_link_libraries(ThreeSumClosest gmock gmock_main)
+target_link_libraries(astar_A gmock gmock_main)
